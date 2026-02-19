@@ -1,0 +1,295 @@
+<!DOCTYPE html> <!--Tells the browser the document type-->
+<html lang ="en"> <!--tells the browser the prefered language is english -->
+
+    <head>
+        <meta charset="UTF-8"> <!--allows special characters-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--makes site responsive on phones and tablets -->
+        <title>5CornersDaycare</title> <!--browser tab title -->
+        <link rel="stylesheet" href="styles.css"> <!--connects css of styles for looks and colors-->
+        <link rel="stylesheet" href="layout.css"> <!--connects css layout for the overall grids -->
+       
+        <!--connect google fonts-->
+        <!--
+        Fonts used:
+        Archivo Black – Google Fonts: https://fonts.google.com/specimen/Archivo+Black
+        Coming Soon – Google Fonts: https://fonts.google.com/specimen/Coming+Soon
+        Sour Gummy – Google Fonts: https://fonts.google.com/specimen/Sour+Gummy
+        Nunito – Google Fonts: https://fonts.google.com/specimen/Nunito
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Coming+Soon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!--FIXED TOP NAVIGATION BAR-->
+        <header class="navbar"> 
+            <div class="topbar-inner"> <!-- inner container to control width and alignment -->
+                
+                <!-- LOGO -->
+                <a href="#home" class="logo"> <!--clicking it returns to home-->
+                    <img src="img/logo.jfif" alt="5 corners daycare logo"> <!--logo image-->
+                </a>
+
+                <!-- NAVIGATION -->
+                <nav class="nav"> <!--all will be styled into buttons-->
+                    <a href="index.html">Home</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="checkout.html">Register</a>
+                    <a href="contactUs.html">Contact Us</a>
+                    <a href="location.html">Location & Hours</a>
+                    
+                </nav>
+            </div>
+        </header> 
+        
+        <!--Home Page-->
+        <main>
+            <section id="home" class="hero1">
+                
+                <div class="hero-inner"> <!-- Inner container to control width -->
+                    <h2 class="hero-badge">Licensed daycare</h2> <!-- Licensed daycare badge --> 
+                    <h1 class="hero-title">5 Corners Daycare</h1> <!-- Main heading -->
+                    <h4 class="hero-subtitle"> <!-- Supporting tagline -->
+                        A nurturing environment where kids can grow, learn, and feel safe every day.
+                    </h4>
+                    <div class="hero-actions">
+                        <a href="#about" class="button button-large">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- images that will make up the parralex effect  -->
+                <div class="parallax-scene" aria-hidden="true">
+                    <img class="layer layer-cloud1" src="img/cloud1.png" alt="">
+                    <img class="layer layer-cloud2" src="img/cloud2.png" alt="">
+                    <img class="layer layer-cloud3" src="img/cloud3.png" alt="">
+                    <img class="layer layer-cloud4" src="img/cloud4.png" alt="">
+
+                    <img class="layer layer-bird1" src="img/bird1.png" alt="">
+                    <img class="layer layer-bird2" src="img/bird2.png" alt="">
+                    <img class="layer layer-bird3" src="img/bird3.png" alt="">
+
+                    <img class="layer layer-road" src="img/road.png"  alt="">
+                    <img class="layer layer-daycare" src="img/daycare.png" alt="">
+
+                    <img class="layer layer-bush1" src="img/bush1.png" alt="">
+                    <img class="layer layer-bush2" src="img/bush2.png" alt="">
+
+                    <img class="layer layer-ball" src="img/ball.png" alt="">
+                </div>
+            </section>
+           
+            <section id="about" class="about-deck element" aria-label="About Us slide deck">
+                <div class="deck" role="region" aria-label="About slides">
+                    <!-- SLIDE 1 -->
+                    <article id="about-1" class="deck-slide">
+                    <div class="slide-content">
+                        <h3>About Us</h3>
+                        <p>
+                        At 5 corners daycare, we provide a secure supportive and trusting environment in which children can
+                        develop and grow at their own pace. We offer creative and stimulating child-centered activities that
+                        encourage social, emotional, intellectual and physical growth and well being.
+                        </p>
+                        <p>
+                        The goals of our program are to nurture self-confidence, self-discipline, cooperation and social skills.
+                        We respect and acknowledge color, culture, age, gender, ability, race, appearance and social-economic status.
+                        </p>
+                        <p>
+                        We offer infant, toddler, and preschool care with both full-time and part-time spots available.
+                        We offer a variety of indoor and outdoor activities that support healthy development.
+                        </p>
+                    </div>
+
+                    <div class="slide-nav">
+                        <span class="slide-spacer"></span>
+                        <a class="button" href="#about-2" aria-label="Next slide">→</a>
+                    </div>
+                    </article>
+
+                    <!-- SLIDE 2 -->
+                    <article id="about-2" class="deck-slide">
+                    <div class="slide-content">
+                        <h3>Licensed Staff &amp; Support</h3>
+                        <p>The new 5Corners Daycare provides licensed:</p>
+                        <ul>
+                        <li>ECE Teachers</li>
+                        <li>IT Staff</li>
+                        <li>Special Need Staff</li>
+                        <li>Assistants on site at all times (all First Aid certified)</li>
+                        </ul>
+                        <p>
+                        In a clean, safe and secure environment.
+                        </p>
+                    </div>
+
+                    <div class="slide-nav">
+                        <a class="button" href="#about-1" aria-label="Previous slide">←</a>
+                        <a class="button" href="#about-3" aria-label="Next slide">→</a>
+                    </div>
+                    </article>
+
+                    <!-- SLIDE 3 -->
+                    <article id="about-3" class="deck-slide">
+                    <div class="slide-content">
+                        <h3>Activities, Snacks &amp; Programs</h3>
+                        <p>
+                        We offer a variety of indoor and outdoor activities that support healthy development. Cognitive learning
+                        that is age appropriate and helps to develop fine motor skills.
+                        </p>
+                        <p class="ratio">2 healthy snacks each day</p>
+                        <p>
+                        Our programs include 0-12 years multi age group and 3-5 years group daycare, full time or part time,
+                        drop off and pick up available to Forsythe Elementary School.
+                        </p>
+
+                        <p class="cta-row">
+                        <a class="button" href="programs.html">View Programs</a>
+                        </p>
+                    </div>
+
+                    <div class="slide-nav">
+                        <a class="button" href="#about-2" aria-label="Previous slide">←</a>
+                        <a class="button" href="#about-4" aria-label="Next slide">→</a>
+                    </div>
+                    </article>
+
+                    <!-- SLIDE 4 -->
+                    <article id="about-4" class="deck-slide">
+                    <div class="slide-content">
+                        <h3>Tour &amp; Register</h3>
+                        <p>
+                        Space is filling fast so drop by and tour our facility and register your child today.
+                        </p>
+
+                        <p class="cta-row">
+                        <a class="button" href="contactUs.html">Book a Tour</a>
+                        <a class="button" href="checkout.html">Register Now</a>
+                        </p>
+                    </div>
+
+                    <div class="slide-nav">
+                        <a class="button" href="#about-3" aria-label="Previous slide">←</a>
+                        <span class="slide-spacer"></span>
+                    </div>
+                    </article>
+                </div>
+
+                <!-- page buttons UNDER the deck -->
+                <nav class="deck-pages" aria-label="Slide pages">
+                    <a class="page-dot" href="#about-1" aria-label="Slide 1"></a>
+                    <a class="page-dot" href="#about-2" aria-label="Slide 2"></a>
+                    <a class="page-dot" href="#about-3" aria-label="Slide 3"></a>
+                    <a class="page-dot" href="#about-4" aria-label="Slide 4"></a>
+                </nav>
+
+            </section>
+        </main>
+
+        <section id="team" class="team-section element" aria-label="Meet the Team">
+            <h2>Meet the Team</h2>
+            <div class="team-grid">
+                <!-- CARD 1 -->
+                <article class="team-card">
+                <img class="team-photo" src="img/team-placeholder.png" alt="Team member placeholder photo">
+                <h3 class="team-name">full name</h3>
+                <p class="team-role">Manager</p>
+                <p class="team-desc">
+                    Oversees daily operations, supports families, and makes sure every child is safe.
+                </p>
+                <p class="team-quote">
+                    “I’m dedicated to creating a warm space where every child feels cared for.”
+                </p>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="team-card">
+                <img class="team-photo" src="img/team-placeholder.png" alt="Team member placeholder photo">
+                <h3 class="team-name">full name</h3>
+                <p class="team-role">Supervisor</p>
+                <p class="team-desc">
+                    Supports staff, keeps routines running smoothly, and helps build strong relationships with families.
+                </p>
+                <p class="team-quote">
+                    “My goal is to keep every day organized and full of positive energy.”
+                </p>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="team-card">
+                <img class="team-photo" src="img/team-placeholder.png" alt="Team member placeholder photo">
+                <h3 class="team-name">full name</h3>
+                <p class="team-role">ECE (Early Childhood Educator)</p>
+                <p class="team-desc">
+                    Plans playful learning activities and helps children grow.
+                </p>
+                <p class="team-quote">
+                    “I’m dedicated to turning learning into fun time.”
+                </p>
+                </article>
+                
+                <!-- CARD 4 -->
+                <article class="team-card">
+                    <img class="team-photo" src="img/team-placeholder.png" alt="Team member placeholder photo">
+                    <h3 class="team-name">Full Name</h3>
+                    <p class="team-role">Infant & Toddler Educator</p>
+                    <p class="team-desc">
+                        Provides nurturing care for infants and toddlers and supports early development.
+                    </p>
+                    <p class="team-quote">
+                        “Every cuddle, smile, and gentle word helps build a strong foundation for life.”
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="updates" class="updates-section element" aria-label="Events and Updates">
+  <h2>Events &amp; Updates</h2>
+  <p class="lead">What’s happening this month at 5 Corners Daycare and in our community.</p>
+
+  <div class="updates-grid">
+
+    <!-- UPDATE 1 -->
+    <article class="update-card">
+      <p class="update-month">February 2026</p>
+      <h3 class="update-title">Family Day (Feb 16, 2026)</h3>
+      <p class="update-text">
+        Family Day is a statutory holiday in B.C. Many families attend community events and enjoy a long weekend together.
+        Please check your email for our holiday hours and any schedule reminders.
+      </p>
+      <p class="update-actions">
+        <a class="button" href="contactUs.html">Ask About Hours</a>
+      </p>
+    </article>
+
+    <!-- UPDATE 2 -->
+    <article class="update-card">
+      <p class="update-month">February 2026</p>
+      <h3 class="update-title">Black History Month (All February)</h3>
+      <p class="update-text">
+        Throughout February, we recognize and celebrate Black History Month. We’ll be sharing age-appropriate stories,
+        activities, and learning moments that highlight culture, kindness, and community.
+      </p>
+      <p class="update-actions">
+        <a class="button" href="contactUs.html">Contact Us</a>
+      </p>
+    </article>
+
+    <!-- UPDATE 3 (Daycare-specific placeholder you can edit anytime) -->
+    <article class="update-card">
+      <p class="update-month">February 2026</p>
+      <h3 class="update-title">Daycare Update</h3>
+      <p class="update-text">
+        Spaces are filling quickly for our Infant &amp; Toddler and Preschool programs. Book a tour to see the facility,
+        meet our team, and ask any questions.
+      </p>
+      <p class="update-actions">
+        <a class="button" href="contactUs.html">Book a Tour</a>
+      </p>
+    </article>
+
+  </div>
+</section>
+
+    </body>
+</html>

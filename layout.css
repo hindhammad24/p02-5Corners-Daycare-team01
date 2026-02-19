@@ -1,0 +1,244 @@
+/*For the layout section i used a combination of class lectures 
+css grid layout: https://www.w3schools.com/css/css_grid.asp
+css flexbox: https://www.w3schools.com/css/css3_flexbox.asp
+css responsivness: https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
+
+/* Main section spacing */
+section {
+  padding: 2rem 1rem;
+}
+
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+/* BRAND COMPONENTS*/
+.font-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Colour palette grid */
+.color-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+
+/* Layout for Programs page ---------------------------------------------------------------------- */
+
+.container {
+  width: min(68.75rem, 92%);    /*the smallest it can get and remians 92 percent */
+  margin: 0 auto;               /*centers it*/
+  padding: 1.5rem 0;          /*space aorund*/
+}
+
+
+/* Nav wraps nicely on small screens */
+.nav {
+  display: flex;   
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* PROGRAM LISTING GRID */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+
+/* Make cards stretch evenly */
+.program-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+/*IMAGE RESPONSIVENESS*/
+
+.programs-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 11.25rem;     
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin: 0 auto;
+}
+
+
+/*DETAILS SECTION LAYOUT*/
+
+.details-section {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Make anchor jumps land below header */
+.details-card1,
+.details-card2,
+.details-card3 {
+  scroll-margin-top: 7rem;
+}
+
+
+
+/*CHECKOUT CART LAYOUT --------------------------------------------------------------*/
+
+.page-hero {
+  margin: 1rem 0 1.5rem;
+  max-width: 70ch;
+}
+
+/* stack on mobile for visibility */
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/*responsive table with horizontal scroll */
+.checkout-cart {
+  overflow-x: auto;
+}
+
+/* Payment form layout */
+.payment-form {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Two-column row for expiry and cvv  for mobile */
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* label  input wrap*/
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* Radio rows */
+.radio-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+/*TOP NAVBAR--------------------------------------------------------------------------------------*/
+
+/* Inner wrapper to control width and alignment*/
+.topbar-inner {
+  min-width: 95%;                 /* keeps the topbar 100% of the width */
+  margin: 0 auto;                  /* centers the container */
+  padding: 0.75rem 1rem;           /* breathing room inside the header */
+  display: flex;                   /* makes logo nav sit in a row */
+  align-items: center;             /* vertically aligns logo and links */
+  justify-content: space-between;  /* logo on left, nav on right */
+}
+
+/*Logo image sizing rules on top corner*/
+.logo img {
+  display: block; /* removes inline image gap */
+  height: 3rem;   /* consistent logo height */
+  width: auto;    /* keeps aspect ratio */
+
+  /*Used refrence from  https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
+  transition: height 0.2s ease; /* smooth resize when screen size changes */ 
+}
+
+/* Nav layout rules*/
+.nav {
+  display: flex;              /* links line up horizontally */
+  align-items: center;        /* aligns links vertically */
+  gap: 1rem;                /* spacing between link buttons */
+  flex-wrap: wrap;            /* if not enough space, it wraps to next line */
+  justify-content: flex-end;  /* pushes links to the right on desktop */
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;     /* keep navbar above everything */
+  background-color: white;
+}
+
+.topbar-inner{
+  position: relative;  /* fixed */
+}
+
+
+/*RESPONSIVENESS--------------------------------------------------------------*/
+/*tablet */
+@media (min-width: 48rem) {
+  /* 2 columns on tablet */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*desktop*/
+@media (min-width: 64rem) {
+  
+  /* 3 columns on desktop */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .topbar-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+   .details-section {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+  }
+
+  /* Keep the Program Details heading full width */
+  .details-section > h2 {
+    grid-column: 1 / -1;  /*to avoid the other parts to go under */
+  }
+
+  /*2 colums on desktop*/
+  .checkout-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+

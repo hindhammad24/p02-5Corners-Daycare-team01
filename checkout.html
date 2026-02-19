@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>StyleGuide_5CornersDaycare</title> 
+        <link rel="stylesheet" href="styles.css"> 
+        <link rel="stylesheet" href="layout.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Coming+Soon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+         <!--FIXED TOP NAVIGATION BAR-->
+        <header class="navbar"> 
+            <div class="topbar-inner"> <!-- inner container to control width and alignment -->
+                
+                <!-- LOGO -->
+                <a href="#home" class="logo"> <!--clicking it returns to home-->
+                    <img src="img/logo.jfif" alt="5 corners daycare logo"> <!--logo image-->
+                </a>
+
+                <!-- NAVIGATION -->
+                <nav class="nav"> <!--all will be styled into buttons-->
+                    <a href="index.html">Home</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="checkout.html">Register</a>
+                    <a href="contactUs.html">Contact Us</a>
+                    <a href="location.html">Location & Hours</a>
+                    
+                </nav>
+            </div>
+        </header> 
+        
+        <main class="container">
+            <h2 class="hero">Complete Your Registration</h2>
+            <p class="lead">Review your selected program and submit payment details.</p>
+
+            <section class="checkout-layout" aria-label="Checkout layout">
+
+                <!-- CART -->
+                <section class="checkout-cart element" aria-label="Cart">
+                    <h3>Cart Summary</h3>
+
+                    <table class="cart-table">
+                    <tr>
+                        <th>Item</th>
+                        <th>Cost</th>
+                    </tr>
+                    <tr class="selected-program">
+                        <td>Selected Program: Full-Time Daycare (Ages 3–5)</td>
+                        <td>$950</td>
+                    </tr>
+                    <tr>
+                        <td>Registration Fee</td>
+                        <td>$75</td>
+                    </tr>
+                    <tr>
+                        <td>Spot Deposit</td>
+                        <td>$200</td>
+                    </tr>
+                    <tr>
+                        <th>Total</th>
+                        <th>$1225</th>
+                    </tr>
+                    </table>
+
+                    <p class="muted">
+                    Need to change your selection?
+                    <a class="intext-link" href="programs.html">Go back to Programs</a>
+                    </p>
+                </section>
+
+                <!-- PAYMENT -->
+                <section class="checkout-payment element" aria-label="Payment form">
+                    <h3>Payment Details</h3>
+
+                    <form class="payment-form" action="#" method="post">
+                    <div class="field">
+                        <label for="parent-name">Parent Name</label>
+                        <input type="text" id="parent-name" name="parent-name" autocomplete="name" required>
+                    </div>
+
+                    <fieldset class="field">
+                        <legend>Payment Method</legend>
+
+                        <div class="radio-row">
+                        <input type="radio" id="credit" name="payment" checked>
+                        <label for="credit">Credit Card</label>
+                        </div>
+
+                        <div class="radio-row">
+                        <input type="radio" id="debit" name="payment">
+                        <label for="debit">Debit Card</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="field">
+                        <label for="card-name">Cardholder Name</label>
+                        <input type="text" id="card-name" name="card-name" placeholder="Name on card" autocomplete="cc-name">
+                    </div>
+
+                    <div class="field">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" inputmode="numeric"
+                            placeholder="1234 5678 9012 3456" autocomplete="cc-number">
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="field">
+                        <label for="expiry">Expiry Date</label>
+                        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" autocomplete="cc-exp">
+                        </div>
+
+                        <div class="field">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" inputmode="numeric" placeholder="123" autocomplete="cc-csc">
+                        </div>
+                    </div>
+
+                    <button class="button" type="submit">Pay Now</button>
+                    </form>
+                </section>
+            </section>
+        </main>
+
+    </body>
+</html>
+

@@ -1,0 +1,59 @@
+Fonts Used (HTML / CSS)-----------------------------------------------------------------------------
+
+Archivo Black – Google Fonts
+https://fonts.google.com/specimen/Archivo+Black
+
+Coming Soon – Google Fonts
+https://fonts.google.com/specimen/Coming+Soon
+
+Sour Gummy – Google Fonts
+https://fonts.google.com/specimen/Sour+Gummy
+
+Nunito – Google Fonts
+https://fonts.google.com/specimen/Nunito
+
+
+
+HTML References:------------------------------------------------------------------------------
+
+HTML <input type="reset">
+https://www.w3schools.com/tags/att_input_type_reset.asp
+
+HTML <form> name attribute
+https://www.w3schools.com/tags/att_form_name.asp
+
+HTML Forms Tutorial (Video)
+https://www.youtube.com/watch?v=FoGDNx3INvU
+
+HTML Tables
+https://www.w3schools.com/html/html_tables.asp
+
+UTF Character References (Arrows & Symbols)
+https://www.w3schools.com/charsets/ref_utf_arrows.asp
+
+
+
+CSS References:------------------------------------------------------------------------------
+
+CSS Grid Layout  
+https://www.w3schools.com/css/css_grid.asp
+
+CSS Flexbox 
+https://www.w3schools.com/css/css3_flexbox.asp
+  
+CSS Responsiveness (Media Queries)
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+
+Responsive Image Grid 
+https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp
+
+
+
+Content & Design Inspiration:-----------------------------------------------------------------------
+
+Infant vs. Toddler Development
+https://www.wonderbaby.org/articles/infant-vs-toddler
+
+Preschool Classroom Management Strategies
+https://www.bryantstratton.edu/blog/education-programs/preschool-classroom-management-strategies/
+
