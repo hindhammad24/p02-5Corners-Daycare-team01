@@ -1,4 +1,4 @@
-/* this css file is only for styling purposes and absulutly not for layout*/
+/* this css file is only for styling purposes and absolutely not for layout*/
 
 
 
@@ -882,6 +882,11 @@ Responsiveness
 .programs-page{
   background-color: #e2f1f6;  /* your light blue */
 }
+
+.contacts-page{ /*same for contact page */
+  background-color: #e2f1f6;  /* your light blue */
+}
+
 
 
 /* ============================= */
