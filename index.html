@@ -1,14 +1,18 @@
-<!DOCTYPE html> <!--Tells the browser the document type-->
-<html lang="en"> <!--tells the browser the prefered language is english -->
-
-<head>
-    <meta charset="UTF-8"> <!--allows special characters-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<!--Tells the browser the document type-->
+<html lang="en">
+  <!--tells the browser the prefered language is english -->
+  <head>
+    <meta charset="utf-8" />
+    <!--allows special characters-->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <!--makes site responsive on phones and tablets -->
-    <title>5CornersDaycare</title> <!--browser tab title -->
-    <link rel="stylesheet" href="css/styles.css"> <!--connects css of styles for looks and colors-->
-    <link rel="stylesheet" href="css/layout.css"> <!--connects css layout for the overall grids -->
-
+    <title>5CornersDaycare</title>
+    <!--browser tab title -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--connects css of styles for looks and colors-->
+    <link href="css/layout.css" rel="stylesheet" />
+    <!--connects css layout for the overall grids -->
     <!--connect google fonts-->
     <!--
         Fonts used:
@@ -17,180 +21,375 @@
         Sour Gummy – Google Fonts: https://fonts.google.com/specimen/Sour+Gummy
         Nunito – Google Fonts: https://fonts.google.com/specimen/Nunito
         -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Coming+Soon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Coming+Soon&amp;family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sour+Gummy:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <!--FIXED TOP NAVIGATION BAR-->
     <header class="navbar">
-        <div class="topbar-inner"> <!-- inner container to control width and alignment -->
+      <div class="topbar-inner">
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <!-- inner container to control width and alignment -->
+        <!-- LOGO -->
+        <a class="logo" href="index.html">
+          <!--clicking it returns to home-->
+          <img alt="5 corners daycare logo" src="img/logo.jpg" />
+          <!--logo image-->
+        </a>
+        <!-- NAVIGATION -->
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="programs.html">Programs</a>
+          <a href="technology.html">Technology</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="location.html">Location &amp; Hours</a>
 
-            <!-- LOGO -->
-            <a href="index.html" class="logo"> <!--clicking it returns to home-->
-                <img src="img/logo.jpg" alt="5 corners daycare logo"> <!--logo image-->
-            </a>
+          <!-- WhatsApp -->
+          <a
+            class="nav-social"
+            href="https://wa.me/16044965050"
+            target="_blank"
+            rel="noopener"
+            aria-label="Message 5 Corners Daycare on WhatsApp"
+          >
+            <img src="img/whatsapp_icon.png" alt="" />
+          </a>
 
-            <!-- NAVIGATION -->
-            <nav class="nav"> <!--all will be styled into buttons-->
-                <a href="index.html">Home</a>
-                <a href="programs.html">Programs</a>
-                <a href="checkout.html">Register</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="location.html">Location & Hours</a>
+          <!-- Instagram -->
+          <a
+            class="nav-social"
+            href="https://www.instagram.com/5corners_daycare/"
+            target="_blank"
+            rel="noopener"
+            aria-label="5 Corners Daycare on Instagram"
+          >
+            <img src="img/icon_insta.webp" alt="" />
+          </a>
 
-            </nav>
-        </div>
+          <!-- Book a Tour -->
+          <a class="tour-button" href="contact.html">Book a Tour</a>
+        </nav>
+      </div>
     </header>
-
     <!--Home Page-->
     <main>
-        <section id="home" class="hero1">
+      <section class="hero1" id="home">
+        <div class="hero-inner">
+          <!-- Inner container to control width -->
+          <h1 class="hero-title">5 Corners Daycare</h1>
+          <!-- Main heading -->
+          <h2 class="hero-subtitle">
+            <!-- Supporting tagline -->
+            A nurturing environment where kids can grow, learn, and feel safe
+            every day.
+          </h2>
+          <div class="hero-actions">
+            <a class="button button-large" href="#about">Learn More</a>
+          </div>
+        </div>
+        <!-- images that will make up the parralex effect  -->
+        <div aria-hidden="true" class="parallax-scene">
+          <img
+            alt="Children learning and playing at 5 Corners Daycare"
+            class="layer layer-daycare"
+            src="img/daycare-kids-bg1.png"
+          />
+        </div>
+      </section>
+      <section
+        id="about"
+        class="about-deck element"
+        aria-label="About Us slide deck"
+      >
+        <div class="deck" role="region" aria-label="About slides">
+          <!-- SLIDE 1 of the about us general info-->
+          <article id="about-1" class="deck-slide">
+            <div class="slide-content">
+              <h3>About Us</h3>
 
-            <div class="hero-inner"> <!-- Inner container to control width -->
-                <h1 class="hero-title">5 Corners Daycare</h1> <!-- Main heading -->
-                <h2 class="hero-subtitle"> <!-- Supporting tagline -->
-                    A nurturing environment where kids can grow, learn, and feel safe every day.
-                </h2>
-                <div class="hero-actions">
-                    <a href="#about" class="button button-large">Learn More</a>
-                </div>
+              <p>
+                At 5 corners daycare, we provide a secure supportive and
+                trusting environment in which children can develop and grow at
+                their own pace. We offer creative and stimulating child-centered
+                activities that encourage social, emotional, intellectual and
+                physical growth and well being.
+              </p>
+
+              <p>
+                The goals of our program are to nurture self-confidence,
+                self-discipline, cooperation and social skills. We respect and
+                acknowledge color, culture, age, gender, ability, race,
+                appearance and social-economic status.
+              </p>
+
+              <p>
+                We offer infant, toddler, and preschool care with both full-time
+                and part-time spots available. We offer a variety of indoor and
+                outdoor activities that support healthy development.
+              </p>
             </div>
 
-            <!-- images that will make up the parralex effect  -->
-            <div class="parallax-scene" aria-hidden="true">
-                <img class="layer layer-cloud1" src="img/cloud1.png" alt="cloud in background scene">
-                <img class="layer layer-cloud2" src="img/cloud2.png" alt="cloud2 in background scen">
-                <img class="layer layer-cloud3" src="img/cloud3.png" alt="cloud3 in background scen">
-                <img class="layer layer-cloud4" src="img/cloud4.png" alt="cloud4 in background scen">
-
-                <img class="layer layer-bird1" src="img/bird1.png" alt="bird in background scen">
-                <img class="layer layer-bird2" src="img/bird2.png" alt="bird2 in background scen">
-                <img class="layer layer-bird3" src="img/bird3.png" alt="bird3 in background scen">
-
-                <img class="layer layer-road" src="img/road.png" alt="road in background scen">
-                <img class="layer layer-daycare" src="img/daycare.png" alt="main daycare in background scen">
-
-                <img class="layer layer-bush1" src="img/bush1.png" alt="bush in background scen">
-                <img class="layer layer-bush2" src="img/bush2.png" alt="bush2 in background scen">
-
-                <img class="layer layer-ball" src="img/ball.png" alt="ball in background scen">
+            <!--the arrow that goes to next slide-->
+            <div class="slide-nav">
+              <span class="slide-spacer"></span>
+              <a class="button" href="#about-2" aria-label="Next slide">→</a>
             </div>
-        </section>
+          </article>
 
-        <!--Slides about us scroll through-->
-        <section id="about" class="about-deck element" aria-label="About Us slide deck">
-            <div class="deck" role="region" aria-label="About slides">
-                <!-- SLIDE 1 of the about us general info-->
-                <article id="about-1" class="deck-slide">
-                    <div class="slide-content">
-                        <h3>About Us</h3>
-
-                        <p>
-                            At 5 corners daycare, we provide a secure supportive and trusting environment in which
-                            children can
-                            develop and grow at their own pace. We offer creative and stimulating child-centered
-                            activities that
-                            encourage social, emotional, intellectual and physical growth and well being.
-                        </p>
-
-                        <p>
-                            The goals of our program are to nurture self-confidence, self-discipline, cooperation and
-                            social skills.
-                            We respect and acknowledge color, culture, age, gender, ability, race, appearance and
-                            social-economic status.
-                        </p>
-
-                        <p>
-                            We offer infant, toddler, and preschool care with both full-time and part-time spots
-                            available.
-                            We offer a variety of indoor and outdoor activities that support healthy development.
-                        </p>
-                    </div>
-
-                    <!--the arrow that goes to next slide-->
-                    <div class="slide-nav">
-                        <span class="slide-spacer"></span>
-                        <a class="button" href="#about-2" aria-label="Next slide">→</a>
-                    </div>
-                </article>
-
-                <!-- SLIDE 2 missions staff -->
-                <article id="about-2" class="deck-slide">
-                    <div class="slide-content">
-                        <h3>Licensed Staff &amp; Support</h3>
-                        <p>The new 5Corners Daycare provides licensed:</p>
-                        <ul>
-                            <li>ECE Teachers</li>
-                            <li>IT Staff</li>
-                            <li>Special Need Staff</li>
-                            <li>Assistants on site at all times (all First Aid certified)</li>
-                        </ul>
-                        <p>In a clean, safe and secure environment.</p>
-                    </div>
-
-                    <!--the arrow that goes to next slide and back-->
-                    <div class="slide-nav">
-                        <a class="button" href="#about-1" aria-label="Previous slide">←</a>
-                        <a class="button" href="#about-3" aria-label="Next slide">→</a>
-                    </div>
-                </article>
-
-                <!-- SLIDE 3  activities and programs-->
-                <article id="about-3" class="deck-slide">
-                    <div class="slide-content">
-                        <h3>Activities, Snacks &amp; Programs</h3>
-                        <p>
-                            We offer a variety of indoor and outdoor activities that support healthy development.
-                            Cognitive learning
-                            that is age appropriate and helps to develop fine motor skills.
-                        </p>
-                        <p class="ratio">2 healthy snacks each day</p>
-                        <p>
-                            Our programs include 0-12 years multi age group and 3-5 years group daycare, full time or
-                            part time,
-                            drop off and pick up available to Forsythe Elementary School.
-                        </p>
-
-                        <div class="cta-row">
-                            <a class="button" href="programs.html">View Programs</a>
-                        </div>
-                    </div>
-
-                    <div class="slide-nav">
-                        <a class="button" href="#about-2" aria-label="Previous slide">←</a>
-                        <a class="button" href="#about-4" aria-label="Next slide">→</a>
-                    </div>
-                </article>
-
-                <!-- SLIDE 4  links to contact us and urge to register -->
-                <article id="about-4" class="deck-slide">
-                    <div class="slide-content">
-                        <h3>Tour &amp; Register</h3>
-                        <p>
-                            Space is filling fast so drop by and tour our facility and register your child today.
-                        </p>
-
-                        <div class="cta-row">
-                            <a class="button" href="contact.html">Book a Tour</a>
-                            <a class="button" href="checkout.html">Register Now</a>
-                        </div>
-                    </div>
-
-                    <div class="slide-nav">
-                        <a class="button" href="#about-3" aria-label="Previous slide">←</a>
-                        <span class="slide-spacer"></span>
-                    </div>
-                </article>
+          <!-- SLIDE 2 missions staff -->
+          <article id="about-2" class="deck-slide">
+            <div class="slide-content">
+              <h3>Licensed Staff &amp; Support</h3>
+              <p>The new 5Corners Daycare provides licensed:</p>
+              <ul>
+                <li>ECE Teachers</li>
+                <li>IT Staff</li>
+                <li>Special Need Staff</li>
+                <li>
+                  Assistants on site at all times (all First Aid certified)
+                </li>
+              </ul>
+              <p>In a clean, safe and secure environment.</p>
             </div>
 
-        </section>
+            <!--the arrow that goes to next slide and back-->
+            <div class="slide-nav">
+              <a class="button" href="#about-1" aria-label="Previous slide"
+                >←</a
+              >
+              <a class="button" href="#about-3" aria-label="Next slide">→</a>
+            </div>
+          </article>
 
+          <!-- SLIDE 3  activities and programs-->
+          <article id="about-3" class="deck-slide">
+            <div class="slide-content">
+              <h3>Activities, Snacks &amp; Programs</h3>
+              <p>
+                We offer a variety of indoor and outdoor activities that support
+                healthy development. Cognitive learning that is age appropriate
+                and helps to develop fine motor skills.
+              </p>
+              <p class="ratio">2 healthy snacks each day</p>
+              <p>
+                Our programs include 0-12 years multi age group and 3-5 years
+                group daycare, full time or part time, drop off and pick up
+                available to Forsythe Elementary School.
+              </p>
+
+              <div class="cta-row">
+                <a class="button" href="programs.html">View Programs</a>
+              </div>
+            </div>
+
+            <div class="slide-nav">
+              <a class="button" href="#about-2" aria-label="Previous slide"
+                >←</a
+              >
+              <a class="button" href="#about-4" aria-label="Next slide">→</a>
+            </div>
+          </article>
+
+          <!-- SLIDE 4  links to contact us and urge to register -->
+          <article id="about-4" class="deck-slide">
+            <div class="slide-content">
+              <h3>Tour &amp; Register</h3>
+              <p>
+                Space is filling fast so drop by and tour our facility and
+                register your child today.
+              </p>
+
+              <div class="cta-row">
+                <a class="button" href="contact.html">Book a Tour</a>
+                <a class="button" href="contact.html">Register Now</a>
+              </div>
+            </div>
+
+            <div class="slide-nav">
+              <a class="button" href="#about-3" aria-label="Previous slide"
+                >←</a
+              >
+              <span class="slide-spacer"></span>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="reviews-section element" aria-label="Google reviews">
+        <div class="reviews-heading">
+          <h2>What Families Say</h2>
+          <p>
+            Read what families have shared about their experience at 5 Corners
+            Daycare.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="review-top">
+              <a
+                class="review-name"
+                href="https://www.google.com/maps/contrib/116345247298012062566/reviews?hl=en"
+                target="_blank"
+                rel="noopener"
+              >
+                Sara Siraj
+              </a>
+
+              <span class="review-date">8 months ago</span>
+            </div>
+
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+
+            <p>
+              Two of my daughters joined this daycare as infants, and the staff
+              have always been warm, attentive, and caring, which gave me great
+              peace of mind from day one. The environment is safe, nurturing,
+              and well-organized, and my children were always treated with
+              kindness. The staff contacted us right away whenever they noticed
+              a fever or any other health concern. I am very grateful for the
+              excellent support and service, and highly recommend this daycare
+              to other families.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <a
+                class="review-name"
+                href="https://www.google.com/maps/contrib/109992082935573981299/reviews?hl=en"
+                target="_blank"
+                rel="noopener"
+              >
+                Lina Riascos
+              </a>
+
+              <span class="review-date">11 months ago</span>
+            </div>
+
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+
+            <p>
+              My daughter is in this daycare and I am very happy, my daughter
+              speaks very well of the manager and the teachers. They keep an eye
+              on my daughter and always keep me informed. I am very calm because
+              my daughter is learning and is well taken care of.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <a
+                class="review-name"
+                href="https://www.google.com/maps/contrib/101239219402613164386/reviews?hl=en"
+                target="_blank"
+                rel="noopener"
+              >
+                Heena Sah
+              </a>
+
+              <span class="review-date">9 months ago</span>
+            </div>
+
+            <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
+
+            <p>
+              The journey of settling in as new immigrants with a little one
+              wasn’t easy, but we’re extremely grateful to this daycare for
+              their care and support over the past 2.5 years. A special thank
+              you to Talwinder and Rana for always being so kind and helpful.
+            </p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-top">
+              <a
+                class="review-name"
+                href="https://www.google.com/maps/contrib/113419792854009789412/reviews?hl=en"
+                target="_blank"
+                rel="noopener"
+              >
+                Danish Khan
+              </a>
+
+              <span class="review-date">3 years ago</span>
+            </div>
+
+            <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+
+            <p>
+              I am a parent of a child who is registered at 5 Corners Daycare. I
+              have had nothing but really good experiences with them. Whenever I
+              go to drop off my son in the mornings, I along with my son are
+              always greeted by friendly staff members with a smile and a
+              positive attitude. I would also want to take this time to
+              appreciate the managers (Talwinder and Salem) who have, and
+              continue to run a great daycare which provides a family like
+              environment for my child as well as other like mine. I would
+              definitely recommend this daycare to others.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="instagram-section" aria-label="Instagram posts">
+        <div class="instagram-heading">
+          <h2>Follow Our Day</h2>
+          <p>Take a look at some recent moments from 5 Corners Daycare.</p>
+        </div>
+
+        <div class="instagram-embeds">
+          <iframe
+            src="https://www.instagram.com/reel/DZvKJjwTod2/embed/"
+            title="5 Corners Daycare Instagram Reel"
+            allowfullscreen
+          >
+          </iframe>
+
+          <iframe
+            src="https://www.instagram.com/reel/Dcbxq49vdLj/embed/"
+            title="5 Corners Daycare Instagram Reel"
+            allowfullscreen
+          >
+          </iframe>
+
+          <iframe
+            src="https://www.instagram.com/reel/DcBxuelz8ca/embed/"
+            title="5 Corners Daycare Instagram Reel"
+            allowfullscreen
+          >
+          </iframe>
+
+          <iframe
+            src="https://www.instagram.com/p/Db8yywFmHqt/embed/"
+            title="5 Corners Daycare Instagram Post"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+
+        <div class="instagram-action">
+          <a
+            class="tour-button"
+            href="https://www.instagram.com/5corners_daycare/"
+            target="_blank"
+            rel="noopener"
+          >
+            Follow @5corners_daycare
+          </a>
+        </div>
+      </section>
     </main>
+    <script>
+      const menuButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav");
 
-</body>
-
+      menuButton.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>
