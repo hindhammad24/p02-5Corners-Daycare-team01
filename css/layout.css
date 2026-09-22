@@ -1,344 +1,1584 @@
-/*For the layout section i used a combination of class lectures 
-css grid layout: https://www.w3schools.com/css/css_grid.asp
-css flexbox: https://www.w3schools.com/css/css3_flexbox.asp
-css responsivness: https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
+/* this css file is only for styling purposes and absolutely not for layout*/
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+/*
+TYPOGRAPHY 
+body, h1,2,3,4,p, li, label, input, button, a, code 
+*/
+
+/* basic text setup */
+html {
+  font-size: 100%; /* 16px default so everything is based on this */
+  scroll-behavior: smooth;
 }
 
-
-/* Main section spacing */
-section {
-  padding: 2rem 1rem;
+/*for all the elements in body*/
+body {
+  font-family: "Nunito", sans-serif; /*standard fonts*/
+  color: #000000; /* standard balck as fall back color */
+  margin: 0;
 }
 
-.team-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+/* h1 are always Archivo Black, Purple */
+h1 {
+  font-family: "Archivo Black", sans-serif; /*font*/
+  color: #822c91; /*font color purple */
+  font-size: 2.5rem; /*size of font relative to html or 16*/
 }
 
-.team-quote {
-  margin-top: auto;
+/* h2 are always Sour Gummy, Bold, Green */
+h2 {
+  font-family: "Sour Gummy";
+  color: #a6ca4e;
+  font-size: 2rem;
+  font-weight: 700; /*this makes it more bold */
 }
 
-.update-card{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+/* h3 is always Archivo Black, Dark Blue */
+h3 {
+  font-family: "Archivo Black", sans-serif;
+  color: #0053a3;
+  font-size: 1.5rem;
 }
 
-.update-actions{
-  margin-top: auto;
+/* h4 is always Sour Gummy, Bold, Black */
+h4 {
+  font-family: "Sour Gummy";
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
-/* PRODUCT GRID */
-.product-grid {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
+/* Paragraphs are always Nunito and standard black  */
+p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
 }
 
-
-/* BRAND COMPONENTS*/
-.font-samples {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+/* Lists are standard Nunito and black */
+li {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
 }
 
-/* Colour palette grid */
-.color-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
+/* inline text elements are all fullback are nunito and black*/
+label,
+input,
+button,
+a {
+  font-family: "Sour Gummy", sans-serif;
 }
 
-
-/* Layout for Programs page ---------------------------------------------------------------------- */
-
-.container {
-  width: min(68.75rem, 92%);    /*the smallest it can get and remians 92 percent */
-  margin: 0 auto;               /*centers it*/
-  padding: 1.5rem 0;          /*space aorund*/
+/* code block are always nunito black like standard */
+code {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
 }
 
-
-/* Nav wraps nicely on small screens */
-.nav {
-  display: flex;   
-  flex-wrap: wrap;
-  gap: 0.75rem;
+.hero {
+  text-align: center;
+  margin-bottom: 0rem;
+  font-size: 4rem;
+  position: relative; /* creates a positioning context */
+  overflow: hidden; /* hides layers that go outside */
+  padding-top: 2rem; /* so content doesn't sit under navbar */
 }
 
-/* PROGRAM LISTING GRID */
-
-.product-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 1rem;
+.hero1 {
+  text-align: center;
+  margin-bottom: 0rem;
+  font-size: 4rem;
+  position: relative; /* creates a positioning context */
+  background: #e2f1f6; /*  light blue */
+  min-height: 80vh; /* full screen */
+  overflow: hidden; /* hides layers that go outside */
+  padding-top: 7rem; /* so content doesn't sit under navbar */
 }
 
-
-/* Make cards stretch evenly */
-.program-card {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+/* Keep hero text ABOVE the scene */
+.hero-inner {
+  position: relative;
+  z-index: 5; /* higher than the images */
 }
 
+.lead {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
 
-/*IMAGE RESPONSIVENESS*/
+.ratio {
+  color: #a6ca4e;
+  font-weight: 800;
+}
 
-.programs-img {
-  display: block;
+.cost {
+  color: #34c3ef;
+  font-weight: 800;
+}
+
+h1.hero-title {
+  margin-top: 2.4rem;
+}
+
+/* Updated hero subtitle to h2 to fix heading hierarchy error in index.html.
+   Manually styled to match previous h4 appearance. */
+h2.hero-subtitle {
+  font-family: "Sour Gummy";
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: black;
+}
+
+.site-footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+
+  background-color: #0053a3;
+  color: #ffffff;
+
+  border-top: 0.2rem solid #34c3ef;
+}
+
+/* footer links */
+.site-footer a {
+  color: #a6ca4e;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* hover effect */
+.site-footer a:hover,
+.site-footer a:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.site-footer p a {
+  /* ADD apacing b/w links */
+  margin: 0 0.35rem;
+}
+
+/*INTERACTIVE ELEMENTS*/
+
+/*In-text-----------------------------------------------------------------------------------*/
+/* In-text link are blue and change to purple */
+.intext-link {
+  color: #0053a3; /* font color  */
+  text-decoration: underline; /* keep the underline as indication of the link */
+  font-weight: 700; /* bold */
+  transition: color 0.18s ease; /* learned this last year in iat 235*/ /*makes the transition smooth*/
+}
+
+.intext-link:hover,
+.intext-link:focus-visible {
+  color: #822c91; /* purple on hover  and stays when hovered*/
+}
+
+.intext-link:active {
+  color: #34c3ef; /* light blue when pressed */
+}
+
+/*Buttons-----------------------------------------------------------------------------------*/
+/* All buttons are purple and turn to blue with slight shaddow and transisitoon  */
+.nav a,
+.button,
+button.button,
+button {
+  border-radius: 999rem; /* pill shape by curving raduis of edges  */
+  text-decoration: none; /*removes the underline */
+  font-weight: 500; /* semi bold */
+  color: #ffffff; /*changes original black to white only for buttons */
+  background-color: #822c91; /* purple bakcground changes to blue  */
+  padding: 0.4rem 0.75rem; /* padding around for extra space for ease of reading */
+  font-size: 1rem;
+  border: none; /*to remove border off the sumbit and restart */
+
+  transition:                      /*again transitions where leanred last year*/
+    transform 0.18s ease,
+    /*the ease makes the change in the color and hover more pleasant */
+    background-color 0.18s ease,
+    box-shadow 0.18s ease,
+    color 0.18s ease;
+}
+
+/* Hover effects  */
+.nav a:hover,
+.button:hover,
+button:hover,
+.nav a:focus-visible,
+.button:focus-visible,
+button:focus-visible {
+  background-color: #0053a3; /* changes background to dark blue */
+  transform: translateY(-0.125rem) scale(1.03); /*makes it go up a little */
+  box-shadow: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.18); /*applies a very slight shadow for ui effects */
+}
+
+/* when pressed */
+.nav a:active,
+.button:active,
+button:active {
+  transform: scale(0.98); /* changes size to smaller as if pushing back */
+  background-color: #34c3ef; /*color lighter blue */
+}
+
+/*INPUTS TEXT-----------------------------------------------------------------------------------*/
+/* Only text-like inputs get the big full-width styling */
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not(
+    [type="reset"]
+  ):not([type="button"]),
+textarea {
   width: 100%;
-  max-width: 100%;
-  height: 11.25rem;     
+  max-width: 30rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.75rem;
+  border: 0.12rem solid #0053a3;
+  background-color: #ffffff;
+  transition:
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+/* Input hover */
+input:hover,
+textarea:hover {
+  border-color: #822c91; /*changes the border to purple */
+}
+
+/* Input focus keyboard and click */
+input:focus,
+textarea:focus {
+  border-color: #34c3ef; /* changes the border to light blue */
+  outline: none; /*removes the black outline */
+  box-shadow: 0 0 0 0.2rem rgba(52, 195, 239, 0.35); /*applies a slight shadow for cool effects*/
+}
+
+/*LABELS-----------------------------------------------------------------------------------*/
+/*labels for tbles and card info  no interactive effects */
+label {
+  font-weight: 600;
+}
+
+/*Radios-----------------------------------------------------------------------------------*/
+/* Radios */
+input[type="radio"] {
+  accent-color: #822c91; /* purple check */
+  transform: scale(1.1); /*scales up */
+}
+
+/* Radio hover feedback via label */
+input[type="radio"] + label {
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  transition: color 0.18s ease;
+}
+
+input[type="radio"] + label:hover,
+input[type="radio"]:focus-visible + label {
+  color: #0053a3; /* dark blue */
+  outline: none;
+}
+
+input[type="radio"]:checked + label {
+  color: #822c91; /* purple when selected */
+  font-weight: 700;
+}
+
+/*IMAGES*/
+
+/*Standard sizing for images */
+img {
+  max-width: 60%; /*all images are big so 60% is ideal size */
+  height: auto; /*so it doesnt alter look */
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* IMAGERY GALLERY */
+/*i used this tutorial for help https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp*/
+.imagery-grid {
+  display: grid; /*displays as a grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(6.5rem, 1fr)
+  ); /*makes each image fit into a box */
+  gap: 0.75rem; /*adds gaps betwenn images */
+}
+
+.imagery-grid img {
+  width: 100%; /*all the width and hieght auto*/
+  aspect-ratio: 1 / 1; /* square images */
   object-fit: cover;
   border-radius: 0.75rem;
-  margin: 0 auto;
 }
 
-
-/*DETAILS SECTION LAYOUT*/
-
-.details-section {
-  margin-top: 2.5rem;
-  display: grid;
-  gap: 1rem;
+/* CONTENT IMAGES  */
+/* Rounds or curves images inside articles */
+article img,
+.img-link {
+  border-radius: 0.75rem;
 }
 
-/* Make anchor jumps land below header */
-.details-card1,
-.details-card2,
-.details-card3 {
-  scroll-margin-top: 7rem;
+/* IMAGE AS LINK*/
+a .img-link {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  border-radius: 0.75rem;
 }
 
-
-
-/*CHECKOUT CART LAYOUT --------------------------------------------------------------*/
-
-.page-hero {
-  margin: 1rem 0 1.5rem;
-  max-width: 70ch;
+/* Hover effects */
+a:hover .img-link,
+a:focus-visible .img-link {
+  transform: translateY(-0.15rem) scale(1.02);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.18);
+  outline-offset: 0.25rem;
 }
 
-/* stack on mobile for visibility */
-.checkout-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  align-items: start;
+/* Active pressed */
+a:active .img-link {
+  transform: scale(0.98);
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-/*responsive table with horizontal scroll */
-.checkout-cart {
-  overflow-x: auto;
+article img {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Payment form layout */
-.payment-form {
-  display: grid;
-  gap: 1rem;
-}
-
-/* Two-column row for expiry and cvv  for mobile */
-.form-grid-2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-/* label  input wrap*/
-.field {
-  display: grid;
-  gap: 0.4rem;
-}
-
-/* Radio rows */
-.radio-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-
-/*TOP NAVBAR--------------------------------------------------------------------------------------*/
-
-/* Inner wrapper to control width and alignment*/
-.topbar-inner {
-  min-width: 95%;                 /* keeps the topbar 100% of the width */
-  margin: 0 auto;                  /* centers the container */
-  padding: 0.75rem 1rem;           /* breathing room inside the header */
-  display: flex;                   /* makes logo nav sit in a row */
-  align-items: center;             /* vertically aligns logo and links */
-  justify-content: space-between;  /* logo on left, nav on right */
-}
-
-/*Logo image sizing rules on top corner*/
 .logo img {
-  display: block; /* removes inline image gap */
-  height: 3rem;   /* consistent logo height */
-  width: auto;    /* keeps aspect ratio */
-
-  /*Used refrence from  https://stackoverflow.com/questions/3508605/how-can-i-transition-height-0-to-height-auto-using-css*/
-  transition: height 0.2s ease; /* smooth resize when screen size changes */ 
+  max-width: none; /* cancels the 60% rule */
+  width: auto;
+  margin-bottom: 0;
 }
 
-/* Nav layout rules*/
-.nav {
-  display: flex;              /* links line up horizontally */
-  align-items: center;        /* aligns links vertically */
-  gap: 1rem;                /* spacing between link buttons */
-  flex-wrap: wrap;            /* if not enough space, it wraps to next line */
-  justify-content: flex-end;  /* pushes links to the right on desktop */
+/*images scroll in horizontal galeery way */
+.gallery-wrap {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
 }
 
-.navbar{
+/* Scroll container */
+.gallery {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Each slide */
+.gallery-item {
+  flex: 0 0 auto;
+  width: min(40rem);
+  scroll-snap-align: start;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  border-radius: 1rem;
+}
+
+.programs-img {
+  display: block; /* removes inline spacing */
+  margin: 0 auto; /* centers horizontally */
+}
+
+.parallax-scene {
   position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
   top: 0;
   left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.parallax-scene img {
+  margin: 0; /* cancels global margin-bottom */
+  display: block;
+}
+
+.parallax-scene .layer {
+  position: absolute;
+}
+
+.hero-subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hero-title {
+  margin: 0;
+}
+.hero-badge {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+
+/* CLOUDS */
+.layer-cloud1 {
+  top: 9%;
+  left: 1%;
+  width: 16rem;
+  z-index: 3;
+}
+.layer-cloud3 {
+  top: 8%;
+  left: 23%;
+  width: 14rem;
+  z-index: 3;
+}
+.layer-cloud2 {
+  top: 6%;
+  left: 50%;
+  width: 20rem;
+  z-index: 3;
+}
+.layer-cloud4 {
+  top: 15%;
+  right: 0%;
+  width: 13rem;
+  z-index: 3;
+}
+
+/*BIRDS */
+.layer-bird1 {
+  top: 28%;
+  left: 10%;
+  width: 2rem;
+  z-index: 2;
+}
+.layer-bird2 {
+  top: 40%;
+  left: 15%;
+  width: 4rem;
+  z-index: 2;
+}
+.layer-bird3 {
+  top: 30%;
+  right: 18%;
+  width: 3rem;
+  z-index: 2;
+}
+
+/*GROUND OBJECTS*/
+.layer-road {
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: 25vh; /* control thickness here */
+  transform: translateX(-50%);
+  object-fit: fill;
+  max-width: none;
+  z-index: 1;
+}
+
+.layer-daycare {
+  bottom: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 34vw;
+  z-index: 6;
+}
+
+.layer-bush1 {
+  bottom: 22%;
+  right: 26%;
+  width: 6rem;
+  z-index: 4;
+}
+.layer-bush2 {
+  bottom: 22%;
+  left: 23%;
+  width: 9rem;
+  z-index: 4;
+}
+.layer-ball {
+  bottom: 20%;
+  right: 22%;
+  width: 2rem;
+  z-index: 5;
+}
+
+@media (max-width: 48rem) {
+  .layer-bush1,
+  .layer-bush2 {
+    transform: scale(0.75);
+  }
+
+  .layer-ball {
+    transform: scale(0.7);
+  }
+}
+/*
+PAGEs and SECTION LAYOUT*/
+
+/*section cards */
+section {
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Card look for each .element block */
+.element {
+  border: 0.12rem solid #0053a3; /* subtle blue */
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+/*   CODE BLOCKS  */
+code {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.08); /* soft grey */
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 0.5rem;
+  overflow-x: auto;
+
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* PRODUCT / SERVICE CARDS  */
+article {
+  background-color: #ffffff;
+  border: 0.12rem solid rgba(130, 44, 145, 0.18); /* subtle purple */
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+/* Hover lift */
+article:hover {
+  transform: translateY(-0.15rem);
+  box-shadow: 0 0.9rem 1.6rem rgba(0, 0, 0, 0.14);
+  border-color: rgba(0, 83, 163, 0.35);
+}
+
+/* PAYMENT FORM BOX */
+.payment-form {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+/* CHECKOUT TABLE */
+table {
   width: 100%;
-  z-index: 999;     /* keep navbar above everything */
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.08);
+}
+
+th,
+td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 0.08rem solid rgba(0, 0, 0, 0.12);
+  font-family: "Nunito", sans-serif;
+}
+
+th {
+  background-color: #0053a3; /* dark blue */
+  color: #ffffff;
+}
+
+article h4 {
+  color: #0053a3;
+  text-align: center;
+}
+
+.selected-program td {
+  background-color: rgba(166, 202, 78, 0.25); /* green tint */
+  font-weight: 700;
+}
+
+.details-card {
+  outline: none;
+  border-radius: 2rem;
   background-color: white;
 }
 
-.topbar-inner{
-  position: relative;  /* fixed */
+.checkout-cart {
+  border: none;
 }
 
+/*BRAND COMPONENTS*/
+/*brand fonts */
+.font-sample.archivo {
+  font-family: "Archivo Black", sans-serif;
+}
 
-/*RESPONSIVENESS--------------------------------------------------------------*/
-/*tablet */
-@media (min-width: 48rem) {
-  /* 2 columns on tablet */
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
+.font-sample.coming-soon {
+  font-family: "Coming Soon", cursive;
+}
+
+.font-sample.sour-gummy {
+  font-family: "Sour Gummy", cursive;
+}
+
+.font-sample.nunito {
+  font-family: "Nunito", sans-serif;
+}
+
+/*COLOUR PALETTE*/
+
+/* Swatch base */
+.swatch {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  border: 0.12rem solid rgba(0, 0, 0, 0.15);
+}
+
+/* Individual colors */
+.swatch.white {
+  background-color: #ffffff;
+}
+.swatch.purple {
+  background-color: #822c91;
+}
+.swatch.blue {
+  background-color: #0053a3;
+}
+.swatch.light-blue {
+  background-color: #34c3ef;
+}
+.swatch.green {
+  background-color: #a6ca4e;
+}
+.swatch.black {
+  background-color: #000000;
+}
+
+#about {
+  position: relative;
+  z-index: 10; /* above the fixed parallax scene */
+  background: #ffffff;
+}
+
+/*
+Responsiveness*/
+
+/*MOBILE*/
+@media (max-width: 26.25rem) {
+  /*420px */
+  .nav a,
+  .button,
+  button {
+    font-size: 0.78rem;
+    padding: 0.28rem 0.6rem;
   }
-
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .form-grid-2 {
-    grid-template-columns: 1fr 1fr;
+  .navbar {
+    width: 2.5rem;
   }
 }
 
-/*desktop*/
+/*Tablet*/
+@media (max-width: 48rem) {
+  /*768px */
+  .nav a,
+  .button,
+  button {
+    font-size: 0.85rem;
+    padding: 0.32rem 0.65rem;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/*DESKTOP*/
+/* Larger blocks on desktop screens */
 @media (min-width: 64rem) {
-  
-  /* 3 columns on desktop */
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .topbar-inner {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-   .details-section {
-    grid-template-columns: repeat(3, 1fr);
-    align-items: start;
-  }
-
-  /* Keep the Program Details heading full width */
-  .details-section > h2 {
-    grid-column: 1 / -1;  /*to avoid the other parts to go under */
-  }
-
-  /*2 colums on desktop*/
-  .checkout-layout {
-    grid-template-columns: 1fr 1fr;
+  /* 1024px */
+  .imagery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   }
 }
 
+/* ABOUT SLIDE DECK      */
 
-
-
-/* CONTACT PAGE LAYOUT -------------------------------------------------------------- */
-
-/* keeps content from hiding behind fixed navbar */
-.contact-page{
-  padding-top: 6.5rem; /* same idea as hero1 padding-top */
+.about-deck {
+  background: #eff8d8;
+  padding: 0;
+  margin: 0;
+  border: none;
 }
 
-/* stack on mobile, 2 cols on desktop */
-.contact-layout{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  align-items: start;
+/* Horizontal scroll container */
+.deck {
+  display: flex;
+  overflow-x: auto; /* mouse / trackpad scroll */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  background: #eff8d8;
+
+  -ms-overflow-style: none; /* IE + Edge */
+  scrollbar-width: none; /* Firefox */
+  border-radius: 1rem;
 }
 
-.form-actions{
+/* subtle scrollbar */
+.deck::-webkit-scrollbar {
+  height: 6px;
+  display: none;
+}
+.deck::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+/* Each slide */
+.deck-slide {
+  min-width: 100%;
+  scroll-snap-align: start;
+  scroll-margin-top: 7rem;
+
+  padding: 2.5rem 1.25rem;
+  background: #eff8d8;
+
+  border: none;
+  box-shadow: none;
+}
+
+/* Larger screens spacing */
+@media (min-width: 64rem) {
+  .deck-slide {
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* Remove global article hover effect */
+.deck-slide:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* Content width */
+.slide-content {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+/* Lists */
+.deck-slide ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+.deck-slide li {
+  margin-bottom: 0.4rem;
+}
+
+/* Arrow navigation aligned with content */
+.slide-nav {
+  max-width: 70ch;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slide-spacer {
+  width: 4rem;
+}
+
+/* Buttons inside slides aligned left */
+.cta-row {
   display: flex;
   gap: 0.75rem;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
 }
 
-/* CHECKBOX ROW */
-.checkbox-row{
+/* DOTS UNDER SLIDES            */
+
+.deck-pages {
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  justify-content: center;
+  gap: 0.4rem;
+  background: #eff8d8;
+  padding: 1rem 0 1.25rem; /* space around dots */
+  margin: 0;
+  border-radius: 2rem;
 }
 
-.checkbox-row label{
-  font-family: "Nunito", sans-serif;
-  cursor: pointer;
+/* Smaller clean dots */
+.page-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: rgba(0, 83, 163, 0.4);
+  border: none;
+  display: inline-block;
+  transition:
+    transform 0.18s ease,
+    background-color 0.18s ease;
 }
 
-
-/* desktop = 2 columns */
-@media (min-width: 64rem){
-  .contact-layout{
-    grid-template-columns: 1fr 1.2fr;
-  }
+.page-dot:hover {
+  transform: scale(1.2);
+  background: #822c91;
 }
 
-
-/* LOCATION PAGE */
-
-.location-layout{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  align-items: start;
+/* Default first active */
+.page-dot:first-child {
+  background: #822c91;
 }
 
-.location-info p{
-  line-height: 1.6;
+.about-deck {
+  margin: 2rem;
 }
 
-.location-map iframe{
-  border-radius: 1rem;
-  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.1);
-}
+/* MEET THE TEAM                 */
 
-.map-embed{
-  width: 100%;
-  height: 400px;
+.team-section {
+  background: #e2f1f6; /* clean section */
   border: 0;
 }
 
-/* Desktop = 2 columns */
-@media (min-width: 64rem){
-  .location-layout{
-    grid-template-columns: 1fr 1.4fr;
+/* Grid layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Card */
+.team-card {
+  background: #ffffff;
+  border: 0.12rem solid rgba(0, 83, 163, 0.18); /* soft blue border */
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.06);
+}
+
+/* Photo */
+.team-photo {
+  width: 100%;
+  max-width: 14rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin: 0 auto 0.75rem;
+}
+
+/* Text */
+.team-name {
+  margin: 0.25rem 0 0;
+  text-align: center;
+}
+
+.team-role {
+  margin: 0.35rem 0 0.75rem;
+  text-align: center;
+  font-weight: 800;
+  color: #822c91; /* purple from  palette */
+  font-family: "Nunito", sans-serif;
+}
+
+/* Body text */
+.team-desc {
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+}
+
+/* Quote block */
+.team-quote {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border-radius: 1rem;
+  background: rgba(52, 195, 239, 0.18); /* light-blue tint */
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 48rem) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 4 columns */
+@media (min-width: 64rem) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .team-photo {
+    max-width: 100%;
+  }
+}
+
+#team {
+  position: relative;
+  z-index: 10; /* higher than parallax */
+}
+
+#team h2 {
+  text-align: center;
+}
+
+.program-age {
+  font-weight: 700;
+  color: #822c91;
+  margin-top: 0;
+}
+
+.program-title {
+  margin-bottom: 0;
+}
+
+.program-info {
+  margin: 0.5rem;
+}
+
+.programs-page {
+  background-color: #e2f1f6; /*  light blue */
+}
+
+.contacts-page {
+  /*same for contact page */
+  background-color: #e2f1f6; /*  light blue */
+}
+
+.location-page {
+  background-color: #e2f1f6;
+}
+
+/* PROGRAM DETAILS (details-card) */
+
+.details-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* Program paragraph spacing */
+.details-card p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+/* Info paragraph under title */
+.program-info {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Meta lines: Age + Ratio */
+.program-meta {
+  margin: 0.35rem 0;
+}
+
+.program-meta strong {
+  color: #0053a3; /* dark blue */
+  font-weight: 800;
+}
+
+.program-action .button {
+  display: inline-block;
+}
+
+.meta-note {
+  display: inline-block;
+  margin-top: 0.25rem;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.95rem;
+}
+
+/* Daily Program heading */
+.daily-title {
+  margin: 1.1rem 0 0.5rem;
+  color: #0053a3; /* uses  h4 style but match blue */
+}
+
+/* Daily list styling */
+.daily-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+/* Make list items feel “clean” */
+.daily-list li {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.details-card .button {
+  display: inline-block;
+  margin-top: 0.75rem;
+}
+
+/* EVENTS & UPDATES              */
+
+#updates {
+  position: relative;
+  z-index: 10; /* stays above parallax layers */
+}
+
+.updates-section {
+  background: #eff8d8; /* light blue like  theme */
+  border: 0;
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.update-card {
+  background: #ffffff;
+  border: 0.12rem solid rgba(0, 83, 163, 0.18);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.06);
+}
+
+/* small month tag */
+.update-month {
+  margin: 0 0 0.5rem;
+  font-weight: 800;
+  color: #822c91; /* purple */
+  font-family: "Nunito", sans-serif;
+}
+
+/* keep h3 spacing tight */
+.update-title {
+  margin: 0 0 0.5rem;
+}
+
+.update-text {
+  margin: 0 0 0.9rem;
+  line-height: 1.6;
+}
+
+.update-actions {
+  margin: 0;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.updates-section h2,
+.updates-section .lead {
+  text-align: center;
+}
+
+/* Tablet = 2 columns */
+@media (min-width: 48rem) {
+  .updates-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop = 3 columns */
+@media (min-width: 64rem) {
+  .updates-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* NAVBAR CONTACT ICONS */
+.nav .nav-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  background-color: #0053a3;
+  color: #ffffff;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.nav .nav-icon:hover,
+.nav .nav-icon:focus-visible {
+  background-color: #34c3ef;
+}
+
+/* BOOK A TOUR NAV BUTTON */
+.nav .tour-button {
+  background-color: #a6ca4e;
+  color: #000000;
+  font-weight: 700;
+
+  padding: 0.55rem 1rem;
+}
+
+.nav .tour-button:hover,
+.nav .tour-button:focus-visible {
+  background-color: #34c3ef;
+  color: #000000;
+}
+
+/* SOCIAL ICONS IN NAVBAR */
+.nav .nav-social {
+  background: none;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+.nav .nav-social img {
+  width: 2.2rem;
+  height: 2.2rem;
+  max-width: none;
+  margin: 0;
+  object-fit: contain;
+
+  transition: transform 0.18s ease;
+}
+
+.nav .nav-social:hover,
+.nav .nav-social:focus-visible {
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+
+.nav .nav-social:hover img,
+.nav .nav-social:focus-visible img {
+  transform: scale(1.1);
+}
+
+/* BOOK A TOUR BUTTON */
+.nav .tour-button {
+  background-color: #a6ca4e;
+  color: #000000;
+  font-weight: 700;
+  padding: 0.55rem 1rem;
+}
+
+.nav .tour-button:hover,
+.nav .tour-button:focus-visible {
+  background-color: #34c3ef;
+  color: #000000;
+}
+/* TECHNOLOGY PAGE -------------------------------------------------------------- */
+
+.technology-visual img {
+  width: 100%;
+  max-width: 65rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.technology-text h3 {
+  margin-bottom: 0;
+}
+
+.technology-text p {
+  line-height: 1.7;
+  margin-top: 0;
+}
+
+/* GOOGLE REVIEW CARDS -------------------------------------------------------------- */
+
+.review-card {
+  background-color: #ffffff;
+  border: 0.12rem solid #34c3ef;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.review-name {
+  color: #0053a3;
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.review-name:hover,
+.review-name:focus-visible {
+  color: #822c91;
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #212526;
+  opacity: 0.7;
+}
+
+.review-stars {
+  color: #a6ca4e;
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  margin: 0.75rem 0;
+}
+
+.review-card p {
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* INSTAGRAM EMBEDS -------------------------------------------------------------- */
+
+.instagram-embeds iframe {
+  width: 100%;
+  min-height: 34rem;
+
+  border: none;
+  border-radius: 1rem;
+
+  background-color: #ffffff;
+}
+
+/* =========================================================
+   HERO FIX FOR 5 CORNERS DAYCARE HOME PAGE
+   Paste at the VERY BOTTOM of styles.css
+========================================================= */
+
+/* Main hero section */
+.hero1 {
+  position: relative;
+  min-height: 88vh;
+  padding-top: 7rem;
+  overflow: hidden;
+  background: #e2f1f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background image area */
+.parallax-scene {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Hide all old parallax pieces */
+.layer-cloud1,
+.layer-cloud2,
+.layer-cloud3,
+.layer-cloud4,
+.layer-bird1,
+.layer-bird2,
+.layer-bird3,
+.layer-road,
+.layer-bush1,
+.layer-bush2,
+.layer-ball {
+  display: none !important;
+}
+
+/* Make the new kids image fill and center nicely */
+.layer-daycare {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  transform: none !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  z-index: 1 !important;
+}
+
+/* Soft overlay so text is readable */
+.hero1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.38)
+  );
+  z-index: 2;
+}
+
+/* Hero text wrapper */
+.hero-inner {
+  position: relative !important;
+  z-index: 5 !important;
+  width: min(90%, 850px);
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Hero title */
+.hero-title,
+h1.hero-title {
+  margin: 0 0 1rem 0 !important;
+  color: #822c91;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.05;
+  text-shadow: 0 0.2rem 1rem rgba(255, 255, 255, 0.85);
+}
+
+/* Cute subtitle box */
+.hero-subtitle,
+h2.hero-subtitle {
+  display: inline-block;
+  margin: 0 0 1.5rem 0 !important;
+  padding: 0.85rem 1.4rem;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 999px;
+  color: #212526 !important;
+  font-family: "Sour Gummy", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  line-height: 1.4;
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+/* Hero button row */
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+/* Learn more button */
+.hero-actions .button,
+.hero-actions .button-large {
+  position: relative;
+  z-index: 6;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.4rem;
+}
+
+/* Nice fade into next section */
+.hero1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #ffffff);
+  z-index: 3;
+}
+
+/* Mobile fixes */
+@media (max-width: 48rem) {
+  .hero1 {
+    min-height: 78vh;
+    padding-top: 6.5rem;
+  }
+
+  .hero-inner {
+    width: min(92%, 700px);
+    padding: 1rem;
+  }
+
+  .hero-subtitle,
+  h2.hero-subtitle {
+    border-radius: 1.5rem;
+    padding: 0.8rem 1rem;
+  }
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE HERO
+========================================================= */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .hero1 {
+    min-height: 85vh;
+    padding-top: 6rem;
+  }
+
+  .layer-daycare {
+    object-position: center center !important;
+  }
+
+  .hero-inner {
+    width: 92%;
+    padding: 1rem;
+  }
+
+  .hero-title,
+  h1.hero-title {
+    font-size: 2.8rem;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle,
+  h2.hero-subtitle {
+    max-width: 90%;
+
+    font-size: 1.1rem;
+
+    padding: 0.75rem 1rem;
+
+    border-radius: 1.5rem;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-actions .button {
+    font-size: 1rem;
+
+    padding: 0.65rem 1.2rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .hero1 {
+    min-height: 75vh;
+
+    padding-top: 5.5rem;
+  }
+
+  /* Adjust image so important parts stay visible */
+  .layer-daycare {
+    object-fit: cover !important;
+
+    object-position: 55% center !important;
+  }
+
+  .hero-inner {
+    width: 95%;
+
+    padding: 0.5rem;
+  }
+
+  .hero-title,
+  h1.hero-title {
+    font-size: 2.1rem;
+
+    margin-bottom: 0.8rem !important;
+  }
+
+  .hero-subtitle,
+  h2.hero-subtitle {
+    display: block;
+
+    width: 100%;
+
+    font-size: 0.95rem;
+
+    line-height: 1.35;
+
+    padding: 0.7rem 0.9rem;
+
+    border-radius: 1.2rem;
+  }
+
+  .hero-actions {
+    margin-top: 1rem;
+  }
+
+  .hero-actions .button {
+    font-size: 0.95rem;
+
+    padding: 0.6rem 1.1rem;
+  }
+
+  /* softer fade on small screens */
+  .hero1::after {
+    height: 4rem;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .hero-title,
+  h1.hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle,
+  h2.hero-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+/* HAMBURGER MENU FIX */
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 48rem) {
+  .menu-toggle {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 3rem;
+
+    background: #822c91;
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav {
+    display: none !important;
+
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+
+    background: white;
+    padding: 1rem;
+  }
+
+  .nav.active {
+    display: flex !important;
   }
 }
