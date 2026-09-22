@@ -1,105 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>5CornersDaycare</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Coming+Soon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-</head>
-
-<body id="top" class="location-page">
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Coming+Soon&amp;family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;family=Sour+Gummy:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="location-page" id="top">
     <!--FIXED TOP NAVIGATION BAR-->
     <header class="navbar">
-        <div class="topbar-inner"> <!-- inner container to control width and alignment -->
+      <div class="topbar-inner">
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <!-- inner container to control width and alignment -->
+        <!-- LOGO -->
+        <a class="logo" href="index.html">
+          <!--clicking it returns to home-->
+          <img alt="5 corners daycare logo" src="img/logo.jpg" />
+          <!--logo image-->
+        </a>
+        <!-- NAVIGATION -->
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="programs.html">Programs</a>
+          <a href="technology.html">Technology</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="location.html">Location &amp; Hours</a>
 
-            <!-- LOGO -->
-            <a href="index.html" class="logo"> <!--clicking it returns to home-->
-                <img src="img/logo.jpg" alt="5 corners daycare logo"> <!--logo image-->
-            </a>
+          <!-- WhatsApp -->
+          <a
+            class="nav-social"
+            href="https://wa.me/16044965050"
+            target="_blank"
+            rel="noopener"
+            aria-label="Message 5 Corners Daycare on WhatsApp"
+          >
+            <img src="img/whatsapp_icon.png" alt="" />
+          </a>
 
-            <!-- NAVIGATION -->
-            <nav class="nav"> <!--all will be styled into buttons-->
-                <a href="index.html">Home</a>
-                <a href="programs.html">Programs</a>
-                <a href="checkout.html">Register</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="location.html">Location & Hours</a>
+          <!-- Instagram -->
+          <a
+            class="nav-social"
+            href="https://www.instagram.com/5corners_daycare/"
+            target="_blank"
+            rel="noopener"
+            aria-label="5 Corners Daycare on Instagram"
+          >
+            <img src="img/icon_insta.webp" alt="" />
+          </a>
 
-            </nav>
-        </div>
+          <!-- Book a Tour -->
+          <a class="tour-button" href="contact.html">Book a Tour</a>
+        </nav>
+      </div>
     </header>
-
     <main class="container">
-        <h2 class="hero">Location & Hours</h2>
-        <p class="lead">Visit us or find directions below.</p>
-
-        <section class="element location-layout">
-
-            <!-- LEFT SIDE: Address Info -->
-            <div class="location-info">
-                <h3>Our Address</h3>
-
-                <p>
-                    13620 Grosvenor Rd<br>
-                    Surrey, BC<br>
-                    Canada V3R 5C9
-                </p>
-
-                <p>
-                    <strong>Phone:</strong>
-                    <a class="intext-link" href="tel:+16044965050">(604) 496-5050</a>
-                </p>
-
-                <p>
-                    <strong>Hours of Operation:</strong><br>
-                    Monday to Friday<br>
-                    7:00 am – 6:00 pm
-                </p>
-
-                <p>
-                    <a class="button"
-                        href="https://www.google.com/maps/search/?api=1&query=13620+Grosvenor+Rd+Surrey+BC+Canada+V3R+5C9"
-                        target="_blank">
-                        Open in Google Maps
-                    </a>
-                </p>
-            </div>
-
-            <!-- RIGHT SIDE: Embedded Map -->
-            <div class="location-map">
-                <iframe class="map-embed"
-                    src="https://www.google.com/maps?q=13620+Grosvenor+Rd+Surrey+BC+Canada+V3R+5C9&output=embed"
-                    style="border:0;" allowfullscreen loading="lazy">
-                </iframe>
-            </div>
-
-        </section>
-
-
-
-
-
-
+      <h2 class="hero">Location &amp; Hours</h2>
+      <p class="lead">Visit us or find directions below.</p>
+      <section class="element location-layout">
+        <!-- LEFT SIDE: Address Info -->
+        <div class="location-info">
+          <h3>Our Address</h3>
+          <p>
+            13620 Grosvenor Rd<br />
+            Surrey, BC<br />
+            Canada V3R 5C9
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <a class="intext-link" href="tel:+16044965050">(604) 496-5050</a>
+          </p>
+          <p>
+            <strong>Hours of Operation:</strong><br />
+            Monday to Friday<br />
+            7:00 am – 6:00 pm
+          </p>
+          <p>
+            <a
+              class="button"
+              href="https://www.google.com/maps/search/?api=1&amp;query=13620+Grosvenor+Rd+Surrey+BC+Canada+V3R+5C9"
+              target="_blank"
+            >
+              Open in Google Maps
+            </a>
+          </p>
+        </div>
+        <!-- RIGHT SIDE: Embedded Map -->
+        <div class="location-map">
+          <iframe
+            allowfullscreen=""
+            class="map-embed"
+            loading="lazy"
+            src="https://www.google.com/maps?q=13620+Grosvenor+Rd+Surrey+BC+Canada+V3R+5C9&amp;output=embed"
+            style="border: 0"
+          >
+          </iframe>
+        </div>
+      </section>
     </main>
+    <script>
+      const menuButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav");
 
-    <footer class="site-footer" aria-label="Site footer">
-        <p>&copy; 2026 5 Corners Daycare. All rights reserved.</p>
-
-        <!-- add citation.html styleGuide.html githublink -->
-        <p>
-            <a href="citations.html">Citations</a> |
-            <a href="styleguide/index.html">Style Guide</a> |
-            <a href="https://github.com/MSagri05/p02-5Corners-Daycare-team01" target="_blank" rel="noopener">
-                GitHub</a>
-        </p>
-    </footer>
-</body>
-
+      menuButton.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>
