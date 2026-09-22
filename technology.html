@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>5CornersDaycare</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Coming+Soon&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="top" class="technology-page">
+    <!-- FIXED TOP NAVIGATION BAR -->
+    <header class="navbar">
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+      <div class="topbar-inner">
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+          <img src="img/logo.jpg" alt="5 corners daycare logo" />
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="programs.html">Programs</a>
+          <a href="technology.html">Technology</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="location.html">Location &amp; Hours</a>
+
+          <!-- WhatsApp -->
+          <a
+            class="nav-social"
+            href="https://wa.me/16044965050"
+            target="_blank"
+            rel="noopener"
+            aria-label="Message 5 Corners Daycare on WhatsApp"
+          >
+            <img src="img/whatsapp_icon.png" alt="" />
+          </a>
+
+          <!-- Instagram -->
+          <a
+            class="nav-social"
+            href="https://www.instagram.com/5corners_daycare/"
+            target="_blank"
+            rel="noopener"
+            aria-label="5 Corners Daycare on Instagram"
+          >
+            <img src="img/icon_insta.webp" alt="" />
+          </a>
+
+          <!-- Book a Tour -->
+          <a class="tour-button" href="contact.html">Book a Tour</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container technology-main">
+      <h2 class="hero">Technology</h2>
+      <p class="lead">
+        We use technology to help families stay connected, informed, and engaged
+        throughout the day.
+      </p>
+
+      <section
+        class="technology-layout element"
+        aria-label="Brightwheel information"
+      >
+        <!-- VISUAL FIRST -->
+        <div class="technology-visual">
+          <img
+            src="img/brightwheel.png"
+            alt="Illustration showing Brightwheel communication between daycare and families"
+          />
+        </div>
+
+        <!-- TEXT BELOW -->
+        <div class="technology-text">
+          <h3>Brightwheel</h3>
+
+          <p>
+            At 5 Corners Daycare, we use <strong>Brightwheel</strong> to make
+            communication with families easier, faster, and more convenient.
+          </p>
+
+          <p>
+            Brightwheel helps parents stay connected with their child’s daycare
+            experience in one place. Families can receive important messages,
+            updates, and helpful information throughout the day.
+          </p>
+
+          <p>
+            Through Brightwheel, we can support better parent communication,
+            simplify check-ins, and share updates in a way that is easy to
+            access and family-friendly.
+          </p>
+
+          <p>
+            We believe technology should make your experience smoother while
+            keeping you connected to your child’s care, learning, and daily
+            routine.
+          </p>
+
+          <div class="technology-actions">
+            <a class="button" href="contact.html">Ask a Question</a>
+
+            <a
+              class="button"
+              href="https://mybrightwheel.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              Learn About Brightwheel
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const menuButton = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav");
+
+      menuButton.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
